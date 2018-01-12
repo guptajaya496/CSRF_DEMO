@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>CSRF_DEMO</display-name>
+  <!-- <filter>
+    <filter-name>CSRFFilter</filter-name>
+    <filter-class>com.csrf.action.controller.CSRFFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CSRFFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping> -->
+  <servlet>
+    <servlet-name>Welcome</servlet-name>
+    <servlet-class>com.csrf.action.controller.Welcome</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Welcome</servlet-name>
+    <url-pattern>/welcome</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BaseAction</servlet-name>
+    <servlet-class>com.csrf.action.controller.BaseAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BaseAction</servlet-name>
+    <url-pattern>/baseAction</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InsertFaculty</servlet-name>
+    <servlet-class>com.csrf.action.controller.InsertFaculty</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsertFaculty</servlet-name>
+    <url-pattern>/insertFaculty</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CRUDController</servlet-name>
+    <servlet-class>com.csrf.action.controller.CRUDController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CRUDController</servlet-name>
+    <url-pattern>/cRUDController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LogoutAction</servlet-name>
+    <servlet-class>com.csrf.action.controller.LogoutAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutAction</servlet-name>
+    <url-pattern>/logoutAction</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ErrorHandler</servlet-name>
+    <servlet-class>com.csrf.action.controller.ErrorHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ErrorHandler</servlet-name>
+    <url-pattern>/errorHandler</url-pattern>
+  </servlet-mapping>
+  <error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/errorHandler</location>
+  </error-page>
+</web-app>
